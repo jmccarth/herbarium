@@ -1,8 +1,9 @@
 class HerbsController < ApplicationController
   # GET /herbs
   # GET /herbs.json
+  helper_method :sort_column, :sort_direction
   def index
-    @herbs = Herb.all
+    @herbs = Herb.order(sort_column + " " + sort_direction)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -79,5 +80,15 @@ class HerbsController < ApplicationController
       format.html { redirect_to herbs_url }
       format.json { head :no_content }
     end
+  end
+  
+  private
+  
+  def sort_column
+    Herb.columns.map{|c| c.name}.include?(params[:sort]) ? params[:sort] : "family"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end

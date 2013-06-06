@@ -11,3 +11,23 @@
  *= require_self
  *= require_tree .
 */
+table {
+	width:100%;
+}
+
+th {
+	text-align:left;
+}
+
+th a.current {
+	color:#f00;
+}
+
+tr:nth-child(even) {
+	background:#ddd;
+}
+
+td {
+	padding:0.3em;
+}
+
