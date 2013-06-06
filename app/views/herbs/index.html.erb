@@ -1,0 +1,33 @@
+<h1>Listing herbs</h1>
+
+<table>
+  <tr>
+    <th>Family</th>
+    <th>Genus</th>
+    <th>Species</th>
+    <th>Author</th>
+    <th>Name</th>
+    <th>Comments</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @herbs.each do |herb| %>
+  <tr>
+    <td><%= herb.family %></td>
+    <td><%= herb.genus %></td>
+    <td><%= herb.species %></td>
+    <td><%= herb.author %></td>
+    <td><%= herb.name %></td>
+    <td><%= herb.comments %></td>
+    <td><%= link_to 'Show', herb %></td>
+    <td><%= link_to 'Edit', edit_herb_path(herb) %></td>
+    <td><%= link_to 'Destroy', herb, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Herb', new_herb_path %>

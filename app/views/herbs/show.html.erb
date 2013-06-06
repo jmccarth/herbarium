@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Family:</b>
+  <%= @herb.family %>
+</p>
+
+<p>
+  <b>Genus:</b>
+  <%= @herb.genus %>
+</p>
+
+<p>
+  <b>Species:</b>
+  <%= @herb.species %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @herb.author %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @herb.name %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @herb.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_herb_path(@herb) %> |
+<%= link_to 'Back', herbs_path %>
