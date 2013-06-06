@@ -1,5 +1,6 @@
 <h1>Listing herbs</h1>
-
+<%= link_to 'New Herb', new_herb_path %>
+<br />
 <table>
   <tr>
     <th><%= sortable "family" %></th>
@@ -8,9 +9,7 @@
     <th><%= sortable "author" %></th>
     <th><%= sortable "name" %></th>
     <th><%= sortable "comments" %></th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Actions</th>
   </tr>
 
 <% @herbs.each do |herb| %>
@@ -21,13 +20,11 @@
     <td><%= herb.author %></td>
     <td><%= herb.name %></td>
     <td><%= herb.comments %></td>
-    <td><%= link_to 'Show', herb %></td>
-    <td><%= link_to 'Edit', edit_herb_path(herb) %></td>
-    <td><%= link_to 'Destroy', herb, confirm: 'Are you sure?', method: :delete %></td>
+    <td class="actions">
+    	<%= link_to 'Show', herb %>
+    	<%= link_to 'Edit', edit_herb_path(herb) %>
+    	<%= link_to 'Destroy', herb, confirm: 'Are you sure?', method: :delete %>
+    </td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Herb', new_herb_path %>
