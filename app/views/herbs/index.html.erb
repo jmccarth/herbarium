@@ -1,6 +1,7 @@
-<h1>Listing herbs</h1>
-<%= link_to 'New Herb', new_herb_path %>
-<br />
+<h1>Herbs</h1>
+
+
+
 <table>
   <tr>
     <th><%= sortable "family" %></th>
@@ -8,7 +9,6 @@
     <th><%= sortable "species" %></th>
     <th><%= sortable "author" %></th>
     <th><%= sortable "name" %></th>
-    <th><%= sortable "comments" %></th>
     <th>Actions</th>
   </tr>
 
@@ -19,7 +19,6 @@
     <td><%= herb.species %></td>
     <td><%= herb.author %></td>
     <td><%= herb.name %></td>
-    <td><%= herb.comments %></td>
     <td class="actions">
     	<%= link_to 'Show', herb %>
     	<%= link_to 'Edit', edit_herb_path(herb) %>
@@ -28,3 +27,4 @@
   </tr>
 <% end %>
 </table>
+	
