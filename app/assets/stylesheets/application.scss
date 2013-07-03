@@ -21,9 +21,8 @@ body {
 	margin-top:60px;
 }
 
-.row {
-	width:100%;
-	max-width:100%;
+.view-options {
+	padding-top:38px;
 }
 
 /* TABLES */
@@ -34,4 +33,10 @@ table {
 
 th {
 	text-align:left;
+}
+
+/* IMAGES */
+
+img.thumb {
+	width:100px;
 }

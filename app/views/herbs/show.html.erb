@@ -1,35 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Family:</b>
-  <%= @herb.family %>
-</p>
-
-<p>
-  <b>Genus:</b>
-  <%= @herb.genus %>
-</p>
-
-<p>
-  <b>Species:</b>
-  <%= @herb.species %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @herb.author %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @herb.name %>
-</p>
-
-<p>
-  <b>Comments:</b>
-  <%= @herb.comments %>
-</p>
-
-
-<%= link_to 'Edit', edit_herb_path(@herb) %> |
-<%= link_to 'Back', herbs_path %>
+<div class="row">
+	<div class="large-4 small-4 columns">
+		<div class="right">
+			<img src="/images/leaf.jpg" alt="leaf" />
+			<ul class="side-nav">
+				<li class="inactive"><%= link_to 'More photos', '#' %></li>
+				<li class="divider"></li>
+				<li><%= link_to 'Edit', edit_herb_path(@herb) %></li>
+				<li><%= link_to 'Back', herbs_path %></li>
+			</ul>
+		</div>
+	</div>
+	<div class="large-8 small-8 columns">
+		<h2><%= @herb.name %></h2>
+		<table class="row-headings">
+			<tr>
+				<th>Family</th>
+				<td><%= @herb.family %>
+			</tr>
+			<tr>
+				<th>Genus</th>
+				<td><%= @herb.genus %>
+			</tr>
+			<tr>
+				<th>Species</th>
+				<td><%= @herb.species %>
+			</tr>
+			<tr>
+				<th>Author</th>
+				<td><%= @herb.author %>
+			</tr>
+			<tr>
+				<th>Comments</th>
+				<td><%= @herb.comments %>
+			</tr>
+		</table>
+	</div>
+</div>

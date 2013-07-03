@@ -1,30 +1,32 @@
-<h1>Herbs</h1>
-
-
+<div class="row">
+	<div class="large-8 small-8 columns">
+		<h1>Herbs</h1>
+	</div>
+	<div class="view-options large-4 small-4 columns">
+		<dl class="sub-nav right">
+		  <dt>View:</dt>
+		  <dd class="active"><a href="#">Table</a></dd>
+		  <dd><a href="#">Thumbnails</a></dd>
+		</dl>
+	</div>
+</div>
 
 <table>
   <tr>
+	<th></th>
+    <th><%= sortable "name" %></th>
     <th><%= sortable "family" %></th>
     <th><%= sortable "genus" %></th>
     <th><%= sortable "species" %></th>
-    <th><%= sortable "author" %></th>
-    <th><%= sortable "name" %></th>
-    <th>Actions</th>
   </tr>
 
 <% @herbs.each do |herb| %>
   <tr>
+	<td><img class="thumb" src="/images/leaf.jpg" alt="leaf" /></td>
+	<td><%= link_to herb.name, herb %></td>
     <td><%= herb.family %></td>
     <td><%= herb.genus %></td>
     <td><%= herb.species %></td>
-    <td><%= herb.author %></td>
-    <td><%= herb.name %></td>
-    <td class="actions">
-    	<%= link_to 'Show', herb %>
-    	<%= link_to 'Edit', edit_herb_path(herb) %>
-    	<%= link_to 'Destroy', herb, confirm: 'Are you sure?', method: :delete %>
-    </td>
   </tr>
 <% end %>
 </table>
-	
