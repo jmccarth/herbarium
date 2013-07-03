@@ -30,6 +30,15 @@
   <%= @herb.comments %>
 </p>
 
+<p>
+	<b>Image:</b>
+	<br />
+	<% if !@herb.photo_file_name.nil? %>
+		<%= image_tag @herb.photo.url, :size => "150x150" %>
+	<% else %>
+		No image provided for this herb
+	<% end %>
+</p>
 
 <%= link_to 'Edit', edit_herb_path(@herb) %> |
 <%= link_to 'Back', herbs_path %>

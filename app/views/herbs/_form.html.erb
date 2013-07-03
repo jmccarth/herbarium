@@ -1,4 +1,4 @@
-<%= form_for(@herb) do |f| %>
+<%= form_for @herb, :html => { :multipart => true } do |f| %>
   <% if @herb.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@herb.errors.count, "error") %> prohibited this herb from being saved:</h2>
@@ -34,6 +34,9 @@
   <div class="field">
     <%= f.label :comments %><br />
     <%= f.text_field :comments %>
+  </div>
+  <div class="field">
+  		<%= f.file_field :photo %>
   </div>
   <div class="actions">
     <%= f.submit %>
