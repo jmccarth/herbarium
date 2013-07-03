@@ -35,6 +35,16 @@
 				<th>Comments</th>
 				<td><%= @herb.comments %>
 			</tr>
+			<tr>
+				<th>Image:</th>
+				<td>
+					<% if !@herb.photo_file_name.nil? %>
+						<%= image_tag @herb.photo.url, :width => "100" %>
+					<% else %>
+						No image provided for this herb
+					<% end %>
+				</td>
+			</tr>
 		</table>
 	</div>
 </div>
