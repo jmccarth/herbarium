@@ -15,7 +15,7 @@ development:
   database: herbarium_development
   pool: 5
   username: root
-  password: root
+  password: 4Ac@dem!c$
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test:
   database: herbarium_test
   pool: 5
   username: root
-  password: root
+  password: 4Ac@dem!c$
   host: localhost
 
 production:
@@ -38,5 +38,5 @@ production:
   database: herbarium_production
   pool: 5
   username: root
-  password: root
+  password: 4Ac@dem!c$
   host: localhost
