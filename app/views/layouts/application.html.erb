@@ -18,14 +18,16 @@
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
+
   </head>
 
   <body>
 
-	<div class="fixed contain-to-grid">
-		<nav class="top-bar">
+	<div class="fixed">
+		<nav class="top-bar" data-options="is_hover:false">
 			<ul class="title-area">
 		    	<li class="name"><h1><%= link_to 'ENV Herbarium', '/' %></h1></li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 		  	</ul>
 			<section class="top-bar-section">
 				<ul class="right">
@@ -39,10 +41,25 @@
 	<div class="row">
 		<div class="large-12 small-12 columns">
 			<%= yield %>
+			
+			<hr />
+			<footer>
+				<div class="row">
+					<div class="large-6 small-6 columns">
+						<p>&copy; 2013 uWaterloo</p>
+					</div>
+					<div class="large-6 small-6 columns">
+						<ul class="inline-list right">
+							<li><%= link_to "Herbs", herbs_path %></li>
+							<li><%= link_to 'Contact us', '/contact' %></li>
+						</ul>
+					</div>
+			</footer>
+			
 		</div>
 	</div>
-
     
-    <%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "application" %>
+
   </body>
 </html>
