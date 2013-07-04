@@ -1,15 +1,4 @@
-<div class="row">
-	<div class="large-8 small-8 columns">
-		<h1>Herbs</h1>
-	</div>
-	<div class="view-options large-4 small-4 columns">
-		<dl class="sub-nav right">
-		  <dt>View:</dt>
-		  <dd class="active"><a href="#">Table</a></dd>
-		  <dd><a href="#">Thumbnails</a></dd>
-		</dl>
-	</div>
-</div>
+<%= render 'shared/header' %>
 
 <table>
   <tr>
@@ -22,7 +11,7 @@
 
 <% @herbs.each do |herb| %>
   <tr>
-	<td><img class="thumb" src="/images/leaf.jpg" alt="leaf" /></td>
+	<td class="thumb"><img src="/images/leaf.jpg" alt="leaf" /></td>
 	<td><%= link_to herb.name, herb %></td>
     <td><%= herb.family %></td>
     <td><%= herb.genus %></td>
@@ -30,3 +19,7 @@
   </tr>
 <% end %>
 </table>
+
+<div class="pagination-centered">
+	<%= will_paginate @herbs %>
+</div>

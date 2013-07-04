@@ -17,6 +17,16 @@
 
 /* TEMPLATE */
 
+body {
+	padding-top:45px;
+}
+
+@media only screen and (min-width: 768px) {
+	.search {
+		padding-top:1.5em;
+	}
+}
+
 /* TABLES */
 
 table {
@@ -27,8 +37,6 @@ th {
 	text-align:left;
 }
 
-/* IMAGES */
-
-img.thumb {
-	width:100px;
+td.thumb {
+	width:15%;
 }

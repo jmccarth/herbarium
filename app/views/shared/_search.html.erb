@@ -1,0 +1,12 @@
+<div class="search row collapse">
+	<%= form_tag herbs_path, :method => 'get' do %>
+		<%= hidden_field_tag :direction, params[:direction] %>  
+		<%= hidden_field_tag :sort, params[:sort] %>
+		<div class="small-8 columns">
+			<%= text_field_tag :search, params[:search] %>
+		</div>
+		<div class="small-4 columns">
+			<%= submit_tag "search", :name => nil, :class => 'button prefix' %>
+		</div>
+	</div>
+<% end %>
