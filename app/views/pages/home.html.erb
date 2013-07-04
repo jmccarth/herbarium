@@ -4,34 +4,23 @@
 </h4>
 
 <hr />
-<div class="row">
-	<div class="small-6 columns">
-		<div class="panel">
-			<h4 class="subheader">Search <%= Herb.all.size %> herbs</h4>
-			<%= render 'shared/search' %>
-		</div>
-	</div>
-	<div class="small-6 columns">
-		<div class="panel">
-			<h4 class="subheader">Did you know?</h4>
-			<p>This interesting fact about this herb was only discovered in the year 2013.</p>	
-		</div>
-	</div>
-</div>
-<hr />
+
+<h3>Most popular</h3>
+
+<ul class="small-block-grid-2 large-block-grid-4">
+	
+<% (1..4).each do %>
+	<li><img src="/images/leaf.jpg" alt="leaf" /></li>
+<% end %>
+
+</ul>
 
 <h3>Recent additions</h3>
 
 <ul class="small-block-grid-2 large-block-grid-4">
-
-<% recent_herbs = Herb.order("created_at desc").limit(4) %>
 	
-<% recent_herbs.each do |herb| %>
-	<li>
-		<%= herb_image_tag(herb) %>
-		<br />
-		<%= link_to herb.name, herb %>
-	</li>
+<% (1..4).each do %>
+	<li><img src="/images/leaf.jpg" alt="leaf" /></li>
 <% end %>
 
 </ul>
