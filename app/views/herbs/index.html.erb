@@ -22,7 +22,13 @@
 
 <% @herbs.each do |herb| %>
   <tr>
-	<td><img class="thumb" src="/images/leaf.jpg" alt="leaf" /></td>
+  	 <td>
+  	 	<% if !herb.photo_file_name.nil? %>
+			<%= image_tag(herb.photo.url, :class => "thumb") %>
+		<% else %>
+			<img class="thumb" src="/images/leaf.jpg" alt="leaf" />
+		<% end %>
+	</td>
 	<td><%= link_to herb.name, herb %></td>
     <td><%= herb.family %></td>
     <td><%= herb.genus %></td>
