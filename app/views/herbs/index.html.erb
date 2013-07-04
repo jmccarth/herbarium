@@ -1,31 +1,44 @@
 <%= render 'shared/header' %>
 
-<table>
-  <tr>
-	<th></th>
-    <th><%= sortable "name" %></th>
-    <th><%= sortable "family" %></th>
-    <th><%= sortable "genus" %></th>
-    <th><%= sortable "species" %></th>
-  </tr>
 
-<% @herbs.each do |herb| %>
-  <tr>
-  	 <td class="thumb">
-  	 	<% if !herb.photo_file_name.nil? %>
-			<%= image_tag(herb.photo.url, :class => "thumb") %>
-		<% else %>
-			<small>no image</small>
-		<% end %>
-	</td>
-	<td><%= link_to herb.name, herb %></td>
-    <td><%= herb.family %></td>
-    <td><%= herb.genus %></td>
-    <td><%= herb.species %></td>
-  </tr>
+<% if @herbs.size %>
+
+	<% if params[:search] %>
+		<div class="panel">
+			<p>Your search for <strong><%= params[:search] %></strong> returned <%= @herbs.size %> results.</p>
+		</div>
+	<% end %>
+
+	<table>
+	  <tr>
+		<th></th>
+	    <th><%= sortable "name" %></th>
+	    <th><%= sortable "family" %></th>
+	    <th><%= sortable "genus" %></th>
+	    <th><%= sortable "species" %></th>
+	  </tr>
+
+	<% @herbs.each do |herb| %>
+	  <tr>
+	  	<td class="thumb">
+			<%= herb_image_tag(herb) %>
+		</td>
+		<td><%= link_to herb.name, herb %></td>
+	    <td><%= herb.family %></td>
+	    <td><%= herb.genus %></td>
+	    <td><%= herb.species %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+	<div class="pagination-centered">
+		<%= will_paginate @herbs %>
+	</div>
+
+<% else %>
+
+	<div class="panel">
+		<p>Sorry, no results found.</p>
+	</div>
+
 <% end %>
-</table>
-
-<div class="pagination-centered">
-	<%= will_paginate @herbs %>
-</div>

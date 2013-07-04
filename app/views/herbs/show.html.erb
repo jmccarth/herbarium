@@ -1,21 +1,14 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
 	<div class="large-4 small-4 columns">
-		<div class="right">
-			<% if !@herb.photo_file_name.nil? %>
-				<%= image_tag @herb.photo.url, :width => "200" %>
-			<% else %>
-				<img src="/images/leaf.jpg" alt="leaf" />
-			<% end %>
-			
-			<ul class="side-nav">
-				<li class="inactive"><%= link_to 'More photos', '#' %></li>
-				<li class="divider"></li>
-				<li><%= link_to 'Edit', edit_herb_path(@herb) %></li>
-				<li><%= link_to 'Back', herbs_path %></li>
-			</ul>
+		<div class="align-right">
+			<%= herb_image_tag(@herb) %>
 		</div>
+		<ul class="side-nav">
+			<li class="inactive"><%= link_to 'More photos', '#' %></li>
+			<li class="divider"></li>
+			<li><%= link_to 'Edit', edit_herb_path(@herb) %></li>
+			<li><%= link_to 'Back', herbs_path %></li>
+		</ul>
 	</div>
 	<div class="large-8 small-8 columns">
 		<h2><%= @herb.name %></h2>
