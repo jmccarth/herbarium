@@ -3,7 +3,12 @@
 <div class="row">
 	<div class="large-4 small-4 columns">
 		<div class="right">
-			<img src="/images/leaf.jpg" alt="leaf" />
+			<% if !@herb.photo_file_name.nil? %>
+				<%= image_tag @herb.photo.url, :width => "200" %>
+			<% else %>
+				<img src="/images/leaf.jpg" alt="leaf" />
+			<% end %>
+			
 			<ul class="side-nav">
 				<li class="inactive"><%= link_to 'More photos', '#' %></li>
 				<li class="divider"></li>
@@ -34,16 +39,6 @@
 			<tr>
 				<th>Comments</th>
 				<td><%= @herb.comments %>
-			</tr>
-			<tr>
-				<th>Image:</th>
-				<td>
-					<% if !@herb.photo_file_name.nil? %>
-						<%= image_tag @herb.photo.url, :width => "100" %>
-					<% else %>
-						No image provided for this herb
-					<% end %>
-				</td>
 			</tr>
 		</table>
 	</div>
