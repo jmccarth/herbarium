@@ -30,7 +30,7 @@
 	
 <% recent_herbs.each do |herb| %>
 	<li>
-		<%= herb_image_tag(herb) %>
+		<%= herb_image_tag(herb, :thumb) %>
 		<br />
 		<%= link_to herb.name, herb %>
 	</li>
