@@ -24,14 +24,13 @@
 
 <h3>Recent additions</h3>
 
-<ul class="small-block-grid-2 large-block-grid-4">
+<ul class="blocks small-block-grid-2 large-block-grid-4">
 
 <% recent_herbs = Herb.order("created_at desc").limit(4) %>
 	
 <% recent_herbs.each do |herb| %>
 	<li>
-		<%= herb_image_tag(herb, :thumb) %>
-		<br />
+		<div class="thumb" style="background-image:url('<%= herb.photo.url(:thumb) %>')"></div>
 		<%= link_to herb.name, herb %>
 	</li>
 <% end %>

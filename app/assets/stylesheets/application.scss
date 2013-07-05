@@ -43,10 +43,20 @@ th {
 
 td.thumb {
 	width:15%;
+	height:100px;
 }
 
 /* MISC */
 
+.thumb {
+	background-size:cover;
+	background-position:center center;
+}
+
 .align-right {
 	text-align:right;
+}
+
+ul.blocks li .thumb {
+	height:200px;
 }
