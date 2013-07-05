@@ -29,6 +29,8 @@ gem 'paperclip','~> 3.0'
 
 gem 'will_paginate'
 
+gem 'twitter-typeahead-rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

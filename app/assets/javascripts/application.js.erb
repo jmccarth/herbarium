@@ -14,5 +14,14 @@
 //= require jquery_ujs
 //= require_tree .
 //= require foundation
+//= require twitter/typeahead   
 
 $(document).foundation();
+
+$(function() {
+	$('.search-input').typeahead( {
+		name: 'herbs', 
+		local: <%= Herb.select('distinct name').collect { |herb| herb.name } %>,
+		limit: 0
+	});
+});

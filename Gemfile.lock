@@ -118,6 +118,10 @@ GEM
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
+    twitter-typeahead-rails (0.9.2)
+      actionpack (>= 3.1)
+      jquery-rails
+      railties (>= 3.1)
     tzinfo (0.3.37)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
@@ -139,6 +143,7 @@ DEPENDENCIES
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)
   therubyracer
+  twitter-typeahead-rails
   uglifier (>= 1.0.3)
   will_paginate
   zurb-foundation (~> 4.0.0)
