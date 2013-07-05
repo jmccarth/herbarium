@@ -23,6 +23,7 @@
 
   <body>
 
+	<!--<div class="fixed contain-to-grid">-->
 	<div class="fixed">
 		<nav class="top-bar" data-options="is_hover:false">
 			<ul class="title-area">
@@ -39,16 +40,19 @@
 	</div>	
 	
 	<div class="row">
-		<div class="large-12 small-12 columns">
+		<div class="content small-12 columns">
+			<% if notice %>
+				<div class="alert-box" id="notice"><%= notice %></div>
+			<% end %>
 			<%= yield %>
 			
 			<hr />
 			<footer>
 				<div class="row">
-					<div class="large-6 small-6 columns">
+					<div class="small-6 columns">
 						<p>&copy; 2013 uWaterloo</p>
 					</div>
-					<div class="large-6 small-6 columns">
+					<div class="small-6 columns">
 						<ul class="inline-list right">
 							<li><%= link_to "Herbs", herbs_path %></li>
 							<li><%= link_to 'Contact us', '/contact' %></li>
