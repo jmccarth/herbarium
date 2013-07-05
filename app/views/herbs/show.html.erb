@@ -4,7 +4,7 @@
 	<div class="large-4 small-4 columns">
 		<div class="right">
 			<% if !@herb.photo_file_name.nil? %>
-				<%= image_tag @herb.photo.url, :width => "200" %>
+				<%= image_tag @herb.photo.url(:medium)%>
 			<% else %>
 				<img src="/images/leaf.jpg" alt="leaf" />
 			<% end %>

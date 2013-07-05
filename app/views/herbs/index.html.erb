@@ -13,7 +13,7 @@
   <tr>
   	 <td class="thumb">
   	 	<% if !herb.photo_file_name.nil? %>
-			<%= image_tag(herb.photo.url, :class => "thumb") %>
+			<%= image_tag herb.photo.url(:thumb) %>
 		<% else %>
 			<small>no image</small>
 		<% end %>

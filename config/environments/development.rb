@@ -1,6 +1,7 @@
 Herbarium::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-
+  
+  
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -34,4 +35,14 @@ Herbarium::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  if RUBY_PLATFORM =~ /mswin/
+    Paperclip.options[:command_path] = "C:/PROGRA~1/IMAGEM~1.6-Q"
+  elsif RUBY_PLATFORM =~ /osx/
+    #TODO: Update this path when we find out Collin's install path
+    Paperclip.options[:command_path] = "/usr/bin"
+  else
+    Paperclip.options[:command_path] = "/usr/bin"
+  end
+  
 end
