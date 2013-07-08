@@ -5,7 +5,7 @@ class Herb < ActiveRecord::Base
 
   def self.search(search)  
       if search  
-        where('name LIKE ?', "%#{search}%")  
+        where('name LIKE ? OR genus LIKE ? OR family LIKE ? OR species LIKE ?', "%#{search}%","%#{search}%","%#{search}%","%#{search}%")  
       else  
         scoped  
       end  

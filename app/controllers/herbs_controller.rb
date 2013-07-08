@@ -3,8 +3,8 @@ class HerbsController < ApplicationController
   # GET /herbs.json
   helper_method :sort_column, :sort_direction
   def index
-    @herbs = Herb.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 10, :page => params[:page])
-      
+    @herbs_results = Herb.search(params[:search]).order(sort_column + " " + sort_direction)
+    @herbs = @herbs_results.paginate(:per_page => 10, :page => params[:page])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @herbs }

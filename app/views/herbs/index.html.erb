@@ -2,9 +2,9 @@
 
 <% if @herbs.size %>
 
-	<% if params[:search] %>
+	<% if params[:search] && params[:search] != "" %>
 		<div class="panel">
-			<p>Your search for <strong><%= params[:search] %></strong> returned <%= @herbs.size %> results.</p>
+			<p>Your search for <strong><%= params[:search] %></strong> returned <%= @herbs_results.size %> results.</p>
 		</div>
 	<% end %>
 
