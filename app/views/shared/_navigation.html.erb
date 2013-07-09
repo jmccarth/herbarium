@@ -1,0 +1,18 @@
+<div class="fixed">
+	<nav class="top-bar" data-options="is_hover:false">
+		<ul class="title-area">
+	    	<li class="name"><h1><%= link_to 'ENV Herbarium', '/' %></h1></li>
+			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+	  	</ul>
+		<section class="top-bar-section">
+			<ul class="right">
+				<li class="has-dropdown"><%= link_to 'Herbs', herbs_path %>
+					<ul class="dropdown">
+						<li><%=link_to 'New', new_herb_path %></li>
+					</ul>
+				</li>
+				<li><%= link_to 'Contact us', '/contact' %></li>
+			</ul>
+		</section>
+	</nav>
+</div>
