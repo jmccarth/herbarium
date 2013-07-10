@@ -8,4 +8,8 @@ module HerbsHelper
 		end
   end
   
+  def herb_image_search_url(herb)
+    "http://www.google.com/images?q=" + herb.name
+  end
+  
 end
