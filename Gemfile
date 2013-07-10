@@ -20,7 +20,7 @@ group :assets do
 
   # Foundation
   gem 'compass-rails' # you need this or you get an err
-  gem 'zurb-foundation', '~> 4.0.0'
+  gem 'zurb-foundation', '~> 4.2.3'
 end
 
 gem 'jquery-rails'

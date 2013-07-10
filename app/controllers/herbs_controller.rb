@@ -1,6 +1,6 @@
 class HerbsController < ApplicationController
   
-  before_filter RubyCAS::Filter, only: [:new, :create, :edit, :update]
+  #before_filter RubyCAS::Filter, only: [:new, :create, :edit, :update]
   
   # GET /herbs
   # GET /herbs.json

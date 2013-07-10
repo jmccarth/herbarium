@@ -1,3 +1,11 @@
+<ul class="breadcrumbs">
+	<li><%=link_to "Herbs", herbs_path %></li>
+	<li><a href="#"><%= @herb.family %></a></li>
+	<li><a href="#"><%= @herb.genus %></a></li>
+	<li><a href="#"><%= @herb.species %></a></li>
+	<li class="current"><a href="#"><%= @herb.name %></a></li>
+</ul>
+
 <div class="row">
 	<div class="large-4 small-4 columns">
 		<div class="align-right">
