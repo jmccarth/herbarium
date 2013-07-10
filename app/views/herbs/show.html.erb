@@ -9,11 +9,11 @@
 <div class="row">
 	<div class="large-4 small-4 columns">
 		<div class="align-right">
-			<%= herb_image_tag(@herb,:medium) %>
+			<%= link_to herb_image_tag(@herb,:medium), @herb.photo.url %>
 		</div>
 		<ul class="side-nav">
 			<li class="inactive"><%= link_to 'More photos', '#' %></li>
-			<li><%= link_to 'Google Image Search', herb_image_search_url(@herb) %></li>
+			<li><%= link_to 'Google image search', herb_image_search_url(@herb) %></li>
 			<li class="divider"></li>
 			<li><%= link_to 'Edit', edit_herb_path(@herb) %></li>
 			<li><%= link_to 'Back', herbs_path %></li>
