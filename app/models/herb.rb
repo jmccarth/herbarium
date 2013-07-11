@@ -11,4 +11,8 @@ class Herb < ActiveRecord::Base
       end  
   end
   
+  def self.record_view(herb)
+    herb.view_count += 1
+  end
+  
 end

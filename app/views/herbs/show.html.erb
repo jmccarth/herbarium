@@ -7,18 +7,47 @@
 </ul>
 
 <div class="row">
-	<div class="large-4 small-4 columns">
-		<div class="align-right">
+	<div class="large-6 small-12 columns">
+		<div class="preview align-right">
 			<%= herb_image_tag(@herb,:medium) %>
 		</div>
-		<ul class="side-nav">
-			<li class="inactive"><%= link_to 'More photos', '#' %></li>
-			<li class="divider"></li>
-			<li><%= link_to 'Edit', edit_herb_path(@herb) %></li>
-			<li><%= link_to 'Back', herbs_path %></li>
-		</ul>
+		<div class="panel">
+			<h4 class="subheader">
+				More images
+			</h4>
+			<ul class="blocks small-block-grid-3">
+				<li>
+					<div class="thumb" style="background-image:url('/images/leaf.jpg')"></div>
+				</li>
+				<li>
+					<div class="thumb" style="background-image:url('/images/leaf.jpg')"></div>
+				</li>
+				<li>
+					<div class="thumb" style="background-image:url('/images/leaf.jpg')"></div>
+				</li>
+				<li>
+					<div class="thumb" style="background-image:url('/images/leaf.jpg')"></div>
+				</li>
+				<li>
+					<div class="thumb" style="background-image:url('/images/leaf.jpg')"></div>
+				</li>
+				<li>
+					<div class="thumb" style="background-image:url('/images/leaf.jpg')"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="panel">
+			<h4 class="subheader">More</h4>
+			<p>This herb has been viewed <strong><%= @herb.view_count %></strong> times.</p>
+			<hr />
+			<ul class="side-nav">
+				<li><%= link_to 'Edit', edit_herb_path(@herb) %></li>
+				<li><%= link_to 'Delete', '#', :class => 'danger' %></li>
+				<li><%= link_to 'Back', herbs_path %></li>
+			</ul>
+		</div>
 	</div>
-	<div class="large-8 small-8 columns">
+	<div class="large-6 small-12 columns">
 		<h2><%= @herb.name %></h2>
 		<table class="row-headings">
 			<tr>

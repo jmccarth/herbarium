@@ -1,6 +1,6 @@
 class HerbsController < ApplicationController
   
-  #before_filter RubyCAS::Filter, only: [:new, :create, :edit, :update]
+  before_filter RubyCAS::Filter, only: [:new, :create, :edit, :update]
   
   # GET /herbs
   # GET /herbs.json
@@ -18,7 +18,7 @@ class HerbsController < ApplicationController
   # GET /herbs/1.json
   def show
     @herb = Herb.find(params[:id])
-
+    #record_view(@herb)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @herb }
