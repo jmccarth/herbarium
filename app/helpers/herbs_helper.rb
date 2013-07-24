@@ -12,4 +12,8 @@ module HerbsHelper
     "http://www.google.com/images?q=" + herb.name
   end
   
+  def herb_wikipedia_search_url(herb)
+    "http://en.wikipedia.org/wiki/Special:Search/" + herb.name
+  end
+  
 end
