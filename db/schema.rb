@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710181759) do
+ActiveRecord::Schema.define(:version => 20130724150728) do
 
   create_table "herbs", :force => true do |t|
     t.string   "family"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20130710181759) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.integer  "view_count",         :default => 0
+    t.integer  "folder"
   end
 
 end

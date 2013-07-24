@@ -1,6 +1,6 @@
 class Herb < ActiveRecord::Base
   
-  attr_accessible :name, :family, :genus, :species, :author, :comments, :photo
+  attr_accessible :name, :family, :genus, :species, :author, :comments, :photo, :folder
   has_attached_file :photo, :styles => { :medium => "500x", :thumb => "150x" }
 
   def self.search(search)  
