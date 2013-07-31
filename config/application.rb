@@ -56,6 +56,9 @@ module Herbarium
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     
-    config.rubycas.cas_base_url = 'https://cas-dev.uwaterloo.ca/cas/login'
+    config.rubycas.cas_base_url = 'https://cas-dev.uwaterloo.ca'
+    config.rubycas.login_url = 'https://cas-dev.uwaterloo.ca/cas/login'
+    config.rubycas.logout_url = 'http://env-rails.uwaterloo.ca'
+    
   end
 end
