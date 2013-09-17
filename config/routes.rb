@@ -1,4 +1,6 @@
 Herbarium::Application.routes.draw do
+  resources :users
+
   resources :herbs
 
   # The priority is based upon order of creation:

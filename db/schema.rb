@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724150728) do
+ActiveRecord::Schema.define(:version => 20130917183314) do
 
   create_table "herbs", :force => true do |t|
     t.string   "family"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(:version => 20130724150728) do
     t.datetime "photo_updated_at"
     t.integer  "view_count",         :default => 0
     t.integer  "folder"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

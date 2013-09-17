@@ -1,7 +1,12 @@
 class HerbsController < ApplicationController
   
-  before_filter RubyCAS::Filter, only: [:new, :create, :edit, :update]
+  before_filter RubyCAS::Filter, only: [:new, :create, :edit, :update] do |controller|
+      controller.valid_user()
+  end
   
+
+  
+
   # GET /herbs
   # GET /herbs.json
   helper_method :sort_column, :sort_direction
