@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  before_filter RubyCAS::Filter do |controller|
+      controller.valid_user()
+  end
+
   # GET /users
   # GET /users.json
   def index

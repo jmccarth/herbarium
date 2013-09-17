@@ -58,7 +58,7 @@ module Herbarium
     
     config.rubycas.cas_base_url = 'https://cas-dev.uwaterloo.ca/cas'
     config.rubycas.login_url = 'https://cas-dev.uwaterloo.ca/cas/login'
-    config.rubycas.logout_url = 'http://env-rails.uwaterloo.ca'
+    config.rubycas.logout_url = 'https://cas-dev.uwaterloo.ca/cas/logout'
     config.rubycas.authenticate_on_every_request = true
   end
 end
