@@ -17,6 +17,7 @@ ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
 set :use_sudo, false
 
+after "deploy:update_code", "deploy:migrate"
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
