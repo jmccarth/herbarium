@@ -1,4 +1,7 @@
 Herbarium::Application.routes.draw do
+  
+  get '/logout', to: "herbs#logout"
+
   resources :users
 
   resources :herbs

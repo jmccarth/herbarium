@@ -4,6 +4,10 @@ class HerbsController < ApplicationController
       controller.valid_user()
   end
 
+  def logout
+    RubyCAS::Filter.logout(self,root_path)
+  end
+
   #before_filter RubyCAS::Filter, only: [:new, :create, :edit, :update]
   
   # GET /herbs
