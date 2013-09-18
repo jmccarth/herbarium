@@ -12,8 +12,10 @@
 					</ul>
 				</li>
 				<li><%= link_to 'Contact us', '/contact' %></li>
-				<li><%= link_to 'Logout', '/logout' %></li>
+				<% logout_path = root_path + 'logout' %>
+				<li><%= link_to 'Logout', logout_path %></li>
 			</ul>
 		</section>
 	</nav>
+	<%= logout_path %>
 </div>
