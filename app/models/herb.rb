@@ -12,7 +12,7 @@ class Herb < ActiveRecord::Base
   end
   
   def self.record_view(herb)
-    herb.view_count += 1
+    herb.increment!(:view_count)
   end
   
 end
