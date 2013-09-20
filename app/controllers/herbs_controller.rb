@@ -1,8 +1,10 @@
 class HerbsController < ApplicationController
   
-  before_filter RubyCAS::Filter, only: [:new, :create, :edit, :update] do |controller|
-      controller.valid_user()
+  before_filter RubyCAS::Filter, only: [:new, :create, :edit, :update, :destroy] do |controller|
+    controller.validate_user()
   end
+
+  before_filter RubyCAS::GatewayFilter, only: [:index, :show]
 
   def logout
     RubyCAS::Filter.logout(self,root_path)

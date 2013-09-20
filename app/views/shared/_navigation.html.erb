@@ -12,8 +12,11 @@
 					</ul>
 				</li>
 				<li><%= link_to 'Contact us', '/contact' %></li>
-				<% logout_path = root_path + 'logout' %>
-				<li><%= link_to 'Logout', logout_path %></li>
+				<% if controller.valid_user %>
+					<li><%= link_to 'Logout ' + session[:cas_user], root_path + 'logout' %></li>
+				<% else %>
+					<li><%= link_to 'Login', RubyCAS::Filter.login_url(controller) %></li>
+				<% end %>
 			</ul>
 		</section>
 	</nav>

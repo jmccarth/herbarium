@@ -11,11 +11,13 @@
 	<table>
 	  <tr>
 		<th></th>
-	    <th><%= sortable "name" %></th>
+	    <th><%= sortable "name", "Common Name" %></th>
 	    <th><%= sortable "family" %></th>
 	    <th><%= sortable "genus" %></th>
 	    <th><%= sortable "species" %></th>
-		<th class="actions"></th>
+		<% if controller.valid_user %>
+			<th class="actions"></th>
+		<% end %>
 	  </tr>
 
 	<% @herbs.each do |herb| %>
@@ -27,7 +29,9 @@
 	    <td><%= herb.family %></td>
 	    <td><%= herb.genus %></td>
 	    <td><%= herb.species %></td>
-		<td><%= link_to "edit", edit_herb_path(herb) %>
+		<% if controller.valid_user %>
+			<td><%= link_to "edit", edit_herb_path(herb) %></td>
+		<% end %>
 	  </tr>
 	<% end %>
 	</table>
