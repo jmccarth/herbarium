@@ -22,13 +22,13 @@
 
 <hr />
 
-<h3>Recent additions</h3>
+<h3>Popular flora</h3>
 
 <ul class="blocks small-block-grid-2 large-block-grid-4">
 
-<% recent_herbs = Herb.order("created_at desc").limit(4) %>
+<% popular_herbs = Herb.order("view_count desc").limit(4) %>
 	
-<% recent_herbs.each do |herb| %>
+<% popular_herbs.each do |herb| %>
 	<li>
 		<div class="thumb" style="background-image:url('<%= herb.photo.url(:thumb) %>')"></div>
 		<%= link_to herb.name, herb %>
