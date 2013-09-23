@@ -25,7 +25,7 @@
 	  <tr>
 	  	<td class="thumb" style='background-image:url("<%= herb_image_url(herb,:thumb) %>")'>
 		</td>
-		<td><%= link_to herb.name, herb %></td>
+		<td><%= link_to simple_format(herb.name.gsub(/;/,'<br />')), herb %></td>
 	    <td><%= herb.family %></td>
 	    <td><%= herb.genus %></td>
 	    <td><%= herb.species %></td>
