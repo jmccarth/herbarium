@@ -19,11 +19,11 @@ module HerbsHelper
   end
   
   def herb_image_search_url(herb)
-    "http://www.google.com/images?q=" + herb.name
+    "http://www.google.com/images?q=" + herb.genus + "+" + herb.species
   end
   
   def herb_wikipedia_search_url(herb)
-    "http://en.wikipedia.org/wiki/Special:Search/" + herb.name
+    "http://en.wikipedia.org/wiki/Special:Search/" + herb.genus + " " + herb.species
   end
   
 end
