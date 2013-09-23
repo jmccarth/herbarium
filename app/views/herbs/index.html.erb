@@ -23,7 +23,7 @@
 	<% @herbs.each do |herb| %>
 	
 	  <tr>
-	  	<td class="thumb" style="background-image:url('<%=herb.photo.url(:thumb)%>')">
+	  	<td class="thumb" style='background-image:url("<%= herb_image_url(herb,:thumb) %>")'>
 		</td>
 		<td><%= link_to herb.name, herb %></td>
 	    <td><%= herb.family %></td>
