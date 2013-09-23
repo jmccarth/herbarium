@@ -2,7 +2,11 @@ module HerbsHelper
   
   def herb_image_tag(herb,photosize)
     if !herb.photo_file_name.nil?
-		  image_tag herb.photo.url(photosize)
+      if root_path == "/"
+		    image_tag herb.photo.url(photosize)
+      else
+        image_tag root_path + herb.photo.url(photosize)
+      end
 		else
       content_tag :small, "no image"
 		end
