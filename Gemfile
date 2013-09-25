@@ -23,13 +23,9 @@ group :assets do
   gem 'zurb-foundation', '~> 4.2.3'
 end
 
-gem 'jquery-rails'
-
 gem 'paperclip','~> 3.0'
 
 gem 'will_paginate'
-
-gem 'twitter-typeahead-rails'
 
 gem 'rubycas-client-rails',  :git => "git://github.com/rubycas/rubycas-client-rails.git"
 
