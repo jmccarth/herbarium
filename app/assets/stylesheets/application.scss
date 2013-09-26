@@ -17,6 +17,22 @@
 
 /* TEMPLATE */
 
+#eco .top-bar-section a{
+  color:#ccc;
+}
+
+#eco .top-bar-section a:hover {
+  color:#fff;
+}
+
+#eco nav a.icon {
+  font-size:150%;
+}
+
+#eco nav .divider {
+  border-right-color: #777;
+}
+
 body {
 	padding-top:45px !important;
 }
@@ -29,6 +45,14 @@ div.content {
 	.header .search {
 		padding-top:1.5em;
 	}
+}
+
+footer {
+
+}
+
+footer p {
+  text-align:center;
 }
 
 /* TABLES */

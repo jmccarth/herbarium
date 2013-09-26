@@ -1,8 +1,8 @@
 <ul class="breadcrumbs">
 	<li><%=link_to "Herbs", herbs_path %></li>
-	<li><a href="#"><%= @herb.family %></a></li>
-	<li><a href="#"><%= @herb.genus %></a></li>
-	<li><a href="#"><%= @herb.species %></a></li>
+	<li><%=link_to @herb.family, "#{herbs_path}?search=#{@herb.family}" %></li>
+	<li><%=link_to @herb.genus, "#{herbs_path}?search=#{@herb.genus}" %></li>
+	<li><%=link_to @herb.species, "#{herbs_path}?search=#{@herb.species}" %></li>
 	<li class="current"><a href="#"><%= @herb.name %></a></li>
 </ul>
 
@@ -13,17 +13,14 @@
 		<div class="preview align-right">
 			<%= herb_image_tag(@herb,:medium) %>
 		</div>
-		<div class="panel">
-			<h4 class="subheader">More</h4>
-			<ul class="side-nav">
-				<li><%= link_to 'Google image search', herb_image_search_url(@herb) %></li>
-				<li><%= link_to 'Wikipedia search', herb_wikipedia_search_url(@herb) %></li>
-				<% if controller.valid_user %>
-					<li><%= link_to 'Edit', edit_herb_path(@herb) %></li>
-					<li><%= link_to 'Delete', '#', :class => 'danger' %></li>
-				<% end %>
-			</ul>
-		</div>
+		<ul class="side-nav">
+			<li><%= link_to 'Google image search', herb_image_search_url(@herb) %></li>
+			<li><%= link_to 'Wikipedia search', herb_wikipedia_search_url(@herb) %></li>
+			<% if controller.valid_user %>
+				<li><%= link_to 'Edit', edit_herb_path(@herb) %></li>
+				<li><%= link_to 'Delete', '#', :class => 'danger' %></li>
+			<% end %>
+		</ul>
 	</div>
 	<div class="large-6 small-12 columns">
 		<h2><%= @herb.name %></h2>
