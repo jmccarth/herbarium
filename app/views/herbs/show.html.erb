@@ -13,17 +13,23 @@
 		<div class="preview align-right">
 			<%= herb_image_tag(@herb,:medium) %>
 		</div>
-		<ul class="side-nav">
-			<li><%= link_to 'Google image search', herb_image_search_url(@herb) %></li>
-			<li><%= link_to 'Wikipedia search', herb_wikipedia_search_url(@herb) %></li>
-			<% if controller.valid_user %>
-				<li><%= link_to 'Edit', edit_herb_path(@herb) %></li>
-				<li><%= link_to 'Delete', '#', :class => 'danger' %></li>
-			<% end %>
+		
+			
 		</ul>
 	</div>
 	<div class="large-6 small-12 columns">
 		<h2><%= @herb.name %></h2>
+		<p>
+			<%= link_to 'Google images', herb_image_search_url(@herb), target: '_blank', class: 'small button secondary' %>
+			<%= link_to 'Wikipedia', herb_wikipedia_search_url(@herb), target: '_blank', class: 'small button secondary' %>
+		</p>
+		<p>
+			<% if controller.valid_user %>
+				<%= link_to 'Edit', edit_herb_path(@herb) %>
+				<%= link_to 'Delete', '#', :class => 'danger' %>
+			<% end %>
+		</p>
+
 		<table class="row-headings">
 			<tr>
 				<th>Family</th>
