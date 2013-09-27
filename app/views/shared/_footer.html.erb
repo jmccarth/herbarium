@@ -2,7 +2,7 @@
 <footer>
 	<div class="row">
 		<div class="small-3 columns">
-			<img src="/images/uw-logo.png" />
+			<a href="http://uwaterloo.ca"><img src="/images/uw-logo.png" /></a>
 		</div>
 		<div class="small-6 columns">
 			<p>
@@ -10,20 +10,11 @@
 				200 University Avenue West<br />
 				Waterloo, ON, Canada N2L 3G1<br />
 				+1 519 888 4567 x32646<br />
-				env.ecology@uwaterloo.ca<br />
 			</p>
 		</div>
 		<div class="small-3 columns" style="text-align":"right">
-			<img src="/images/env-logo.png" />
+			<a href="http://uwaterloo.ca/environment"><img src="/images/env-logo.png" /></a>
 		</div>
-		<hr />
-	<p>
-		<% if controller.valid_user %>
-			<%= link_to 'Logout ' + session[:cas_user], root_path + 'logout' %>
-		<% else %>
-			<%= link_to 'Login', RubyCAS::Filter.login_url(controller) %>
-		<% end %>
-	</p>
 	</div>
 
 </footer>

@@ -9,6 +9,11 @@
 		  		<li class="divider"></li>
 		    	<li><%= link_to 'Herbs', herbs_path %></li>
 				<li><%= link_to 'Resources', '/resources' %></li>
+				<% if controller.valid_user %>
+					<li><%= link_to 'Logout ' + session[:cas_user], root_path + 'logout' %></li>
+				<% else %>
+					<li><%= link_to 'Login', RubyCAS::Filter.login_url(controller) %></li>
+				<% end %>
 			</ul>
 		<section class="top-bar-section">
 			<ul class="right">
