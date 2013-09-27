@@ -27,7 +27,9 @@ Herbarium::Application.configure do
   config.assets.precompile += %w( .svg .eot .woff .ttf )
 
   # Subdirectory relative URLs
-  config.relative_url_root = "/herbarium"
+  #config.relative_url_root = "/herbarium"
+
+  config.action_controller.relative_url_root = "/herbarium"
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
