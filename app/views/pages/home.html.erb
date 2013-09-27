@@ -21,7 +21,7 @@
 	
 <% popular_herbs.each do |herb| %>
 	<li>
-		<div class="thumb" style="background-image:url('<%= herb_image_url(herb,:thumb) %>')"></div>
+		<div class="thumb" style="background-image:url('<%= herb_image_url(herb,:medium) %>')"></div>
 		<%= link_to herb.name, herb %>
 	</li>
 <% end %>
