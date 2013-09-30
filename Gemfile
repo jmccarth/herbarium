@@ -19,8 +19,9 @@ gem 'therubyracer', :platforms => :ruby
 gem 'uglifier', '>= 1.0.3'
 
 # Foundation
-gem 'compass-rails' # you need this or you get an err
+#gem 'compass-rails' # you need this or you get an err
 #gem 'zurb-foundation', '~> 4.2.3'
+gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
 
 gem 'paperclip','~> 3.0'
 

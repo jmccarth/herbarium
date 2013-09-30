@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/milgner/compass-rails.git
+  revision: c86e7fd9c2605c80816a2f64a3fb8b7c3a09e494
+  branch: rails4
+  specs:
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
+
+GIT
   remote: git://github.com/rubycas/rubycas-client-rails.git
   revision: b97de6edc7871bc43ca1c9572f4d9188a210b341
   specs:
@@ -58,8 +66,6 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    compass-rails (1.0.3)
-      compass (>= 0.12.2, < 0.14)
     erubis (2.7.0)
     execjs (2.0.2)
     fssm (0.2.10)
@@ -147,7 +153,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   coffee-rails
-  compass-rails
+  compass-rails!
   mysql2
   paperclip (~> 3.0)
   protected_attributes
