@@ -51,8 +51,8 @@
 			</tr>
 		</table>
 		<% if controller.valid_user %>
-			<%= link_to 'Edit', edit_herb_path(@herb), class: 'small button' %>
-			<%= link_to 'Destroy', @herb, confirm: 'Are you sure?', method: :delete, class: 'small alert button' %>
+			<%= link_to 'Edit', edit_herb_path(@herb), class: 'tiny button' %>
+			<%= button_to 'Delete', @herb, confirm: 'Are you sure?', method: :delete, class: 'tiny alert button' %>
 		<% end %>
 	</div>
 </div>
