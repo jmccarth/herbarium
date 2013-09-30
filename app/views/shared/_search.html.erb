@@ -1,7 +1,7 @@
-<div class="search row collapse">
-	<%= form_tag herbs_path, :method => 'get' do %>
-		<%= hidden_field_tag :direction, params[:direction] %>  
-		<%= hidden_field_tag :sort, params[:sort] %>
+<%= form_tag herbs_path, :method => 'get' do %>
+	<%= hidden_field_tag :direction, params[:direction] %>  
+	<%= hidden_field_tag :sort, params[:sort] %>
+	<div class="search row collapse">	
 		<div class="small-9 columns">
 			<%= text_field_tag :search, params[:search], :placeholder => 'family, genus, species, common name', :class => 'search-input' %>
 		</div>

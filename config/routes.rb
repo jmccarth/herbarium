@@ -59,8 +59,8 @@ Herbarium::Application.routes.draw do
   
   # PAGES
   
-  match '/contact' => 'pages#contact'
-  match '/resources' => 'pages#resources'
+  get '/contact' => 'pages#contact'
+  get '/resources' => 'pages#resources'
 
 # See how all your routes lay out with "rake routes"
 

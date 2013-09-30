@@ -11,11 +11,13 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require_tree ./jquery
-//= require foundation
-
-$(document).foundation();
+//= require_tree ./foundation
+//= require_tree ./lightbox
+//= require_self
 
 $(function() {
+
+	$(document).foundation();
 
 	var $search_input = $('.search-input')
 	
