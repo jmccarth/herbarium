@@ -1,4 +1,3 @@
-require 'searchbing'
 module HerbsHelper
   
   def herb_image_tag(herb,photosize)
@@ -13,7 +12,6 @@ module HerbsHelper
       #image_tag(bing_img_url)
       #link_to image_tag(bing_img_url), bing_img_url, {"data-lightbox" => "herb", "title" => search_term}
       #link_to image_tag(bing_img_url), bing_img_url
-
 		end
   end
 
