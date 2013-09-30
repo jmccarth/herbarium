@@ -9,7 +9,13 @@ def image_uploader
 			the_image = File.open("/home/jmccarth/testimg/" + file_name)
 			the_herb.photo = the_image
 			the_image.close
-			the_herb.save!
+			#This block may cause problems if there is an image corruption issue
+			begin
+				the_herb.save!
+			rescue ActiveRecord::RecordInvalid
+				# Caused by underlying Paperclip::Errors::NotIdentifiedByImageMagickError
+				$stderr.print "Error saving " + herb_id + " due to ImageMagick error"
+			end
 		end
 	end
 end
