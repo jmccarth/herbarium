@@ -8,7 +8,7 @@
 	  		<ul>
 		  		<li class="divider"></li>
 		    	<li><%= link_to 'Herbs', herbs_path %></li>
-				<li><%= link_to 'Resources', '/resources' %></li>
+				<li><%= link_to 'Resources', resources_path %></li>
 				<% if controller.valid_user %>
 					<li><%= link_to 'Logout ' + session[:cas_user], root_path + 'logout' %></li>
 				<% else %>
