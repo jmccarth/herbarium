@@ -52,7 +52,7 @@
 		</table>
 		<% if controller.valid_user %>
 			<%= link_to 'Edit', edit_herb_path(@herb), class: 'tiny button' %>
-			<%= button_to 'Delete', @herb, confirm: 'Are you sure?', method: :delete, class: 'tiny alert button' %>
+			<%= button_to 'Delete', {action: "destroy", id: @herb.id}, method: :delete, data: { confirm: "Are you sure? This can't be undone"}, class: 'tiny alert button' %>
 		<% end %>
 	</div>
 </div>
