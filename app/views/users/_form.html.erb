@@ -10,7 +10,11 @@
       </ul>
     </div>
   <% end %>
-
+  <% if @user.new_record? %>
+    <h5 class="subheader">Warning: This user will have full editing and deletion rights for all items in all collections.</h5>
+  <% else %>
+    <h5 class="subheader">This user has full editing and deletion rights for all items in all collections.</h5>
+  <% end %>
   <div class="field">
     <%= f.label :username %><br />
     <%= f.text_field :username %>
