@@ -24,7 +24,8 @@
 	
 	  <tr>
 	  	<td class="thumb">
-	  		<%= herb_image_tag(herb,:thumb) %>
+
+	  		<%= link_to herb_image_tag(herb,:thumb), herb %>
 		</td>
 		<td><%= link_to simple_format(herb.name.gsub(/;/,'<br />')), herb %></td>
 	    <td><%= herb.family %></td>
