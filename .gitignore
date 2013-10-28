@@ -16,3 +16,6 @@
 
 # Ignore uploaded images
 /public/system/herbs/photos
+
+# Ignore database config file
+/config/database.yml
