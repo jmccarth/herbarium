@@ -17,7 +17,9 @@ ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
 set :use_sudo, false
 
+after "deploy:finalize_update", "deploy:symlink_config_files"
 after "deploy:update_code", "deploy:migrate"
+
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
@@ -31,4 +33,10 @@ namespace :deploy do
    task :restart, :roles => :app, :except => { :no_release => true } do
      run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
    end
+
+   	desc "Symlink shared config files"
+	task :symlink_config_files do
+		run "#{try_sudo} ln -fs #{ deploy_to }shared/config/database.yml #{release_path}/config/database.yml"
+	end
 end
+
