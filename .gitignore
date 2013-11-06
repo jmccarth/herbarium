@@ -18,4 +18,4 @@
 /public/system/herbs/photos
 
 # Ignore database config file
-/config/database.yml
+config/database.yml
