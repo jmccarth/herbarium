@@ -10,6 +10,7 @@
 		    	<li><%= link_to 'Herbarium', herbs_path %></li>
 				<li><%= link_to 'Resources', resources_path %></li>
 				<% if controller.valid_user %>
+					<li><%= link_to 'New Flora', new_herb_path %></li>
 					<li><%= link_to 'Logout ' + session[:cas_user], root_path + 'logout' %></li>
 				<% else %>
 					<li><%= link_to 'Login', RubyCAS::Filter.login_url(controller) %></li>
